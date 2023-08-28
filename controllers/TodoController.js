@@ -22,6 +22,7 @@ exports.getAllTodos = async (req, res, next) => {
 }
 exports.addNote = async (req, res, next) => {
     try {
+        console.log(req.body);
         const newTodo = await Todo.create(req.body);
         res.status(201).json({
             status: 'success',

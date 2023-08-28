@@ -11,6 +11,11 @@ const todoSchema = new mongoose.Schema({
         type: String,
         require: [true, 'A note should be there.'],
         minlength: 2
+    },
+    state: {
+        type: String,
+        require: [true, 'A state should be there'],
+        enum: ['Todo', 'Doing', 'Done']
     }
 })
 
